@@ -117,36 +117,36 @@ const Todoform = ()=>{
         <div className='row m-md-auto'>
             <div className='col col-md-8  m-md-auto'>
                 <div className='gutter-gap'>
-                    <h1 className='text-center mb-3'>To Do List</h1>
+                    <h1 className='text-center mb-3 text-decoration-underline'>To Do List</h1>
                     <form method='post' onSubmit={submitHandler}>
                         <div className='mb-3'>
-                            <input type='text' placeholder='Enter Person Name' name='name' className='form-control rounded-0 py-2'
+                            <input type='text' placeholder='Enter Person Name (3-20 Chars Only)' name='name' className='form-control rounded-0 py-2 fs-5'
                             value={Inputvalues.name}
                             onChange={changeHandler}/>
                             <p className='text-danger m-0'>{InputErrors.name}</p>
                         </div> 
                         <div className='mb-3 d-md-flex '>
                             <div className='w-50 me-2'>
-                                <input type='text' placeholder='Enter A Valid Email' name='email' className='form-control rounded-0 py-2'
+                                <input type='text' placeholder='Enter A Valid E-mail ID' name='email' className='form-control rounded-0 py-2 fs-5'
                                 value={Inputvalues.email}
                                 onChange={changeHandler}/>
                                 <p className='text-danger m-0'>{InputErrors.email}</p>
                             </div>
                             <div className='w-50 ms-1'>
-                                <input type='number' placeholder='Enter A Valid Mobile Number' name='number' className='form-control rounded-0 py-2'
+                                <input type='number' placeholder='Enter A Valid Mobile Number' name='number' className='form-control rounded-0 py-2 fs-5'
                                 value={Inputvalues.number}
                                 onChange={changeHandler}/>
                                 <p className='text-danger m-0'>{InputErrors.number}</p>
                             </div>
                         </div> 
                         <div className='mb-3'>
-                            <input type='text' placeholder='Enter Project Name' name='project_name' className='form-control rounded-0 py-2'
+                            <input type='text' placeholder='Enter Project Name (3-20 Chars and Numbers Only)' name='project_name' className='form-control rounded-0 py-2 fs-5'
                             value={Inputvalues.project_name}
                             onChange={changeHandler}/>
                             <p className='text-danger m-0'>{InputErrors.project_name}</p>
                         </div>
                         <div className='mb-3'>
-                            <input type='text' placeholder='Enter Task Description' name='task_description' className='form-control rounded-0 py-2'
+                            <input type='text' placeholder='Enter Task Description (3-30 Chars/Num/Spl Char also' name='task_description' className='form-control rounded-0 py-2 fs-5'
                             value={Inputvalues.task_description}
                             onChange={changeHandler}/>
                             <p className='text-danger m-0'>{InputErrors.task_description}</p>

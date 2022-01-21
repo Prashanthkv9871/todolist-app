@@ -19,7 +19,7 @@ const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
                                     <th>Status</th>
                                     <th>Start Date</th>
                                     <th>End Date</th>
-                                    <th>Edit / Delete</th>
+                                    <th> Edit / Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,8 +33,8 @@ const Todolist = ({Todos,deleteHandler,views,editHandler})=>{
                                                 <td>{todo.status}</td>
                                                 <td>{todo.start_date}</td>
                                                 <td>{todo.end_date}</td>
-                                                <td className='text-center table-delete-edit_btn'>
-                                                    <i className="fas fa-edit text-success me-3"
+                                                <td className='table-delete-edit_btn justify-content-between'>
+                                                    <i className="fas fa-edit text-success mx-3"
                                                     onClick={()=>editHandler(index)}></i> 
                                                     <i className="fas fa-trash text-danger" 
                                                     onClick={()=>deleteHandler(index)}></i>
