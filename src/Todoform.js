@@ -40,9 +40,9 @@ const Todoform = ()=>{
         setTodos(FilteredTodo);
     }
     const editHandler = (editIndexValue)=>{
-        const FilteredTodo = Todos.filter((elem,index)=> index !==editIndexValue);
+        const FilteredTodo = Todos.filter((elem,index)=> index !== editIndexValue);
         setTodos(FilteredTodo);
-        const editSelector = Todos.find((elem,index)=> index ===editIndexValue);
+        const editSelector = Todos.find((elem,index)=> index === editIndexValue);
         setInputvalues({
             name:editSelector.name,
             email:editSelector.email,
@@ -61,17 +61,17 @@ const Todoform = ()=>{
         const OnlyStrings = /^[a-zA-Z ]*$/;
         const isEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
         if(!values.name){
-            error.name='Name input shouldn\t be empty!'
+            error.name='Name input should not be empty!'
         }else if(!values.name.match(OnlyStrings)){
             error.name='Please enter only Alphabets'
         }
         if(!values.email){
-            error.email='Email input shouldn\t be empty!'
+            error.email='Email input should not be empty!'
         }else if(!values.email.match(isEmail)){
             error.email='Please provide a valid email'
         }
         if(!values.number){
-            error.number='Number input shouldn\t be empty!'
+            error.number='Number input should not be empty!'
         }else if(!values.number.match(OnlyNum)){
             error.number='Please enter numbers only'
         }else if(values.number.length<10){
@@ -86,7 +86,7 @@ const Todoform = ()=>{
             error.number='Should not start with 1,2,3'
         }
         if(!values.project_name){
-            error.project_name='Project Name input shouldn\t be empty!'
+            error.project_name='Project Name input should not be empty!'
         }else if((values.project_name.length<3)){
             error.project_name='Project name should contain atleast 3'
         }else if((values.project_name.length>30)){
