@@ -180,7 +180,7 @@ const Todoform = ()=>{
                             <p className='text-danger m-0'>{InputErrors.status}</p>
                         </div>
                         <div className='mb-3 d-md-flex align-items-center justify-content-between mt-3'>
-                            <input type='submit' value='SUBMIT' className='btn btn-primary rounded-0 px-4'/>
+                            <input type='submit' value='SAVE' className='btn btn-primary rounded-0 px-4'/>
                             <button type='button' className='btn btn-success rounded-0 px-4'
                             onClick={()=> setviews(true)}>VIEW</button>
                         </div> 
